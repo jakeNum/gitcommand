@@ -1,0 +1,147 @@
+
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"      #git用户配置
+
+git init #初始化，将目录变成Git可以管理的仓库
+
+git add <file>  #添加到仓库
+
+git commit -m <message> #提交到仓库
+
+git status #仓库当前的状态
+
+git diff <file> #查看文件修改的信息
+
+git log #查看提交日志 包括commit_id(版本号)，用户，提交日期，提交说明
+
+git log --pretty=oneline #git log简略  包括commit id(版本号)，提交说明
+
+cat <file> #查看文件内容
+
+git reset --hard 版本号  #版本回退
+
+git reset --hard HEAD^或HEAD^^或HEAD~100  #回退上一个版本或上上个版本或往上100个版本
+
+HEAD 表示当前版本,指向的就是当前分支
+
+git reflog #命令历史记录的查看
+
+git diff    #是工作区(work dict)和暂存区(stage)的比较
+
+git diff --cached    #是暂存区(stage)和分支(master)的比较
+
+git checkout -- <file> #丢弃工作区的修改(文件回到最近一次git commit或git add时的状态)
+
+git reset HEAD <file> #暂存区的修改撤销掉
+
+ssh-keygen -t rsa -C "youremail@example.com"  #创建SSH Key
+
+git remote add origin git@server-name:path/repo-name.git或https://github.com/username/repo-name.git  #关联一个远程库
+
+git push -u origin master  #第一次推送master分支的所有内容,把本地的master分支和远程的master分支对应起来
+
+git push origrn 分支名   #把该分支上的所有本地提交推送到远程库
+
+git clone git@server-name:path/repo-name.git或https://github.com/username/repo-name.git   #克隆一个仓库
+
+git checkout -b（相当于git branch 和git checkout） #创建并切换分支
+
+git branch #查看当前分支
+
+git branch 分支名 #创建分支
+
+git checkout 分支名 #切换分支
+
+git merge 分支名 #合并指定分支（分支名）到当前分支
+
+git branch -d 分支名 #删除分支
+
+git branch -D 分支名 #强制删除分支
+
+git log --graph（--pretty=oneline --abbrev-commit）  #查看分支合并图
+
+git merge --no-ff（普通模式） -m <message> 分支名   #不使用Fast forward（快进模式）合并，能看出曾经是否做过合并
+
+git stash #保存工作现场
+
+git stash list #工作现场存储列表
+
+git stash apply  #工作现场恢复，不删除list
+
+git stash drop #删除内容
+
+git stash pop #相当于git stash apply 和 git stash drop
+
+git remote -v #查看远程库信息
+
+git checkout -b branch-name origin/branch-name  #在本地创建和远程分支对应的分支
+
+git branch --set-upstream-to=origin/dev(分支名) dev(分支名)  #创建本地dev分支与远程origin/dev分支的链接
+
+git pull #拉取并合并分支（合并一般有冲突）
+
+git tag <tagname>   #给当前分支打一个新标签
+
+git tag -a <tagname>） -m <message> 分支名    #创建带有说明的标签，用-a指定标签名，-m指定说明文字
+
+git tag  #查看所有标签
+
+git show <tagname>  #查看标签信息
+
+git tag -d <tagname>  #删除一个本地标签
+
+git push origin :refs/tags/<tagname>  #可以删除一个远程标签
+
+git push origin <tagname>  #推送某个标签到远程
+
+git push origin --tags  #推送全部尚未推送到远程的本地标签
+
+git remote rm origin  #删除已有远程库
+
+git config --global alias.<别名> 命令名 #配置别名，例如git config --global alias.co checkout，
+
+                                       配置Git的时候，加上--global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
